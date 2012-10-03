@@ -60,7 +60,7 @@ sub from_json {
 
 sub TO_JSON {
     my $self = shift;
-    my %trimmed = map { $_ => $self->{$_} } (qw/id title type value/);
+    my %trimmed = map { $_ => $self->{$_} } (qw/id title type value extra/);
     return \%trimmed;
 }
 
