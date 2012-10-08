@@ -57,7 +57,6 @@ sub send {
                 event => 'on_receive',
                 state => $state
             )->to_json;
-            say 'Sending JSON:', $e;
             $self->db('pub')->publish(
                 $self->{channel},
                 $e,

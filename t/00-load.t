@@ -3,7 +3,7 @@
 use Test::More tests => 1;
 
 BEGIN {
-    use_ok( 'Statis::Viewer' ) || print "Bail out!\n";
+    use_ok( 'AnyEvent::Statis' ) || print "Bail out!\n";
 }
 
-diag( "Testing Statis::Viewer $Statis::Viewer::VERSION, Perl $], $^X" );
+diag( "Testing AnyEvent::Statis $AnyEvent::Statis::VERSION, Perl $], $^X" );

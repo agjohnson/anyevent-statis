@@ -16,7 +16,12 @@ has 'id' => (
 
 has 'title' => (
     is => 'rw',
-    default => ''
+    default => '',
+    trigger => sub {
+        my ($self, $value) = @_;
+        $self->id($self->slug)
+          if (!$self->id);
+    }
 );
 
 has 'type' => (
